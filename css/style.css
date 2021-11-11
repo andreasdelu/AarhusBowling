@@ -1,8 +1,17 @@
+:root{
+    --blue: #0f1972;
+    --grey: #f0f0f0;
+}
+
 html, body{
     margin: 0;
     padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
-img{
-    width: 100vw;
+header{
+    box-sizing: border-box;
+    
 }
