@@ -16,6 +16,8 @@ html, body{
 header{
     box-sizing: border-box;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo{
@@ -24,5 +26,6 @@ header{
 }
 
 .menuicon{
-    
+    width: 30px;
+    margin-right: 20px;
 }
