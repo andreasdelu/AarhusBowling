@@ -1,31 +1,147 @@
+@import url("https://use.typekit.net/mao7wyd.css");
+
 :root{
     --blue: #0f1972;
     --grey: #f0f0f0;
+
+    --halcom: "halcom", sans-serif;
 }
 
 html, body{
     margin: 0;
     padding: 0;
     width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+}
+
+body{
+    background-color: var(--grey);
+    font-size: 16px;
+    font-family: var(--halcom);
     overflow-x: hidden;
-    box-sizing: border-box;
 }
 
 /********** Navigation **********/
 
 header{
-    box-sizing: border-box;
+    background-color: white;
+    box-shadow: 0 0 20px 2px rgba(136, 10, 10, 0.2);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    margin:0;
+    padding: 0;
 }
 
 .logo{
-    margin: 10px 0 0 20px;
-    width: 150px;
+    margin: 18px 0 18px 20px;
+    height: 48px;
 }
 
-.menuicon{
-    width: 30px;
+.burger{
+    margin-bottom: 0;
+}
+
+.burger .menu{
+    position: absolute;
+    background-color: var(--grey);
+    display: none;
+    width: 100vw;
+    left: 0;
+    top: 100%;
+}
+
+.burger .menuicon{
+    width: 33px;
     margin-right: 20px;
 }
+
+/********** Content **********/
+
+.hero1 
+{
+    background-image: url("../images/powerbowlinghero.jpeg");
+    width: 100vw; 
+    height: 20vh; 
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat; 
+}
+
+h1 
+{
+    color: white;
+    margin-top: 0;
+    display: flex;
+    position: relative; 
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    padding-top: 10vw;
+    padding-bottom: 10vw;  
+
+}
+
+
+
+
+
+
+
+
+.parkering h2 {
+    color: var(--blue);
+    text-align: center;
+}
+
+
+
+/********** Footer **********/
+
+footer{
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+    background-color: var(--blue);
+}
+
+.kontakt, .adresse{
+    padding-bottom: 5px;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+.kontakt{
+    padding-top: 18px;
+    margin-bottom: 20px;
+}
+
+footer h3{
+    margin-bottom: 2px;
+    margin-top: 0;
+    font-weight: 300;
+}
+
+footer hr{
+    margin: 0 20px;
+    border: none;
+    border-top: 1px solid white;
+    
+}
+footer a {
+    font-weight: 200;
+    color: rgba(245, 245, 245, 0.87);
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+footer p {
+    font-weight: 200;
+    color: rgba(245, 245, 245, 0.87);
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+
