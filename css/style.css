@@ -11,7 +11,18 @@ html, body{
     box-sizing: border-box;
 }
 
+/********** Navigation **********/
+
 header{
     box-sizing: border-box;
+    display: flex;
+}
+
+.logo{
+    margin: 10px 0 0 20px;
+    width: 150px;
+}
+
+.menuicon{
     
 }
