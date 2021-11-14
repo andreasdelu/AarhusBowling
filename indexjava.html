@@ -8,7 +8,7 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <title>Århus Bowlinghal</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styletest.css">
     <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
     <link rel="apple-touch-icon" href="images/favicon.svg">
 </head>
@@ -16,15 +16,14 @@
 
     <header>
             <a class="logo" href="index.html"><img src="images/logo.svg" alt="Århus Bowlinghal Logo SVG"></a>
-
             <div class="burger">
-                <img class="menuicon" src="images/menuicon.svg" alt="Menu icon">
-                <nav class="menu">
+                <img id="burger" class="menuicon" src="images/menuicon.svg" alt="Menu icon">
+                <nav id="menu" class="menu">
                     <ul>
                         <li>
                           <a href="">Fest & Events</a>
-                          <p class="arrow">▸</p>
-                          <ul class="dropdown">
+                          <div id="arrow1" class="arrow">▸</div>
+                          <ul id="drop1" class="dropdown">
                             <li><a href="">Børnefødselsdag</a></li>
                             <li><a href="">Blå Mandag</a></li>
                             <li><a href="">Klubbowling & Halturneringer</a></li>
@@ -33,8 +32,8 @@
                         </li>
                         <li>
                           <a href="">Menukort</a>
-                          <p class="arrow">▸</p>
-                          <ul class="dropdown">
+                          <p id="arrow2" class="arrow">▸</p>
+                          <ul id="drop2" class="dropdown">
                             <li><a href="">Børnefødselsdag</a></li>
                             <li><a href="">Blå Mandag</a></li>
                             <li><a href="">Klubbowling & Halturneringer</a></li>
@@ -43,8 +42,8 @@
                         </li>
                         <li>
                           <a href="">Tider & Priser</a>
-                          <p class="arrow">▸</p>
-                          <ul class="dropdown">
+                          <p id="arrow3" class="arrow">▸</p>
+                          <ul id="drop3" class="dropdown">
                             <li><a href="">Børnefødselsdag</a></li>
                             <li><a href="">Blå Mandag</a></li>
                             <li><a href="">Klubbowling & Halturneringer</a></li>
@@ -106,5 +105,98 @@
         
       
     </footer>
+    <script>
+      const burger = document.getElementById("burger");
+      const menu = document.getElementById("menu");
+      const arrow1 = document.getElementById("arrow1");
+      const arrow2 = document.getElementById("arrow2");
+      const arrow3 = document.getElementById("arrow3");
+      const dropdown1 = document.getElementById("drop1");
+      const dropdown2 = document.getElementById("drop2");
+      const dropdown3 = document.getElementById("drop3");
+
+      arrow1.addEventListener("click", showDrop1);
+      arrow2.addEventListener("click", showDrop2);
+      arrow3.addEventListener("click", showDrop3);
+
+      var drop1 = false;
+      var drop2 = false;
+      var drop3 = false;
+
+      burger.addEventListener("click", showMenu);
+      var active = false;
+      function showMenu() {
+        if (!active) {
+          menu.style.display = "flex";
+          active = true;
+        }
+        else{
+          menu.style.display = "none";
+          active = false;
+        }
+      }
+
+      function showDrop1() {
+          if (!drop1) {
+            arrow1.classList.add("arrowactive");
+            dropdown1.style.display = "block";
+            dropdown2.style.display = "none";
+            dropdown3.style.display = "none";
+            drop1 = true;
+            drop2 = false;
+            drop3 = false;
+          }
+          else{
+            arrow1.classList.remove("arrowactive");
+            arrow2.classList.remove("arrowactive");
+            arrow3.classList.remove("arrowactive");
+            dropdown1.style.display = "none";
+            drop1 = false;
+            drop2 = false;
+            drop3 = false;
+          }
+      }
+      function showDrop2() {
+          if (!drop2) {
+            arrow2.classList.add("arrowactive");
+            dropdown2.style.display = "block";
+            dropdown1.style.display = "none";
+            dropdown3.style.display = "none";
+            drop2 = true;
+            drop1 = false;
+            drop3 = false;
+          }
+          else{
+            arrow1.classList.remove("arrowactive");
+            arrow2.classList.remove("arrowactive");
+            arrow3.classList.remove("arrowactive");
+            dropdown2.style.display = "none";
+            drop2 = false;
+            drop1 = false;
+            drop3 = false;
+          }
+      }
+      function showDrop3() {
+          if (!drop3) {
+            arrow3.classList.add("arrowactive");
+            dropdown3.style.display = "block";
+            dropdown2.style.display = "none";
+            dropdown1.style.display = "none";
+            drop3 = true;
+            drop1 = false;
+            drop3 = false;
+          }
+          else{
+            arrow1.classList.remove("arrowactive");
+            arrow2.classList.remove("arrowactive");
+            arrow3.classList.remove("arrowactive");
+            dropdown3.style.display = "none";
+            drop3 = false;
+            drop1 = false;
+            drop3 = false;
+          }
+      }
+
+    </script>
   </body>
 </html>
