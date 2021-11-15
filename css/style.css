@@ -448,10 +448,10 @@ footer p {
 /********** PowerBowling-underside **********/
 
 .powerbowl {
-  background-image: url("../images/wall.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
+  background-image: url("../images/seamwall.webp");
+  background-repeat:repeat;
+  background-size: 100%;
+  /* background-position: 50% 50%; */
   width: 100vw;
   margin: 0;
   padding: 0;
@@ -459,6 +459,7 @@ footer p {
   justify-content: center;
   align-items:center;
   flex-direction: column;
+  overflow-x: hidden;
 }
 .powerbowl a {
   margin-top: 20px;
@@ -473,23 +474,22 @@ footer p {
   0px 0 100px rgb(64, 173, 224);
   text-decoration: none;
   padding: 10px;
-  border: 2px solid rgb(138, 218, 255); 
+  border: 2.5px solid rgb(138, 218, 255); 
   border-radius: 20px;
   box-shadow: 
   0px 0 10px -10px rgb(135, 226, 217),
-  0px 0 60px 0 rgb(8, 197, 255);
-  background-color: rgba(8, 197, 255, 0.37);
+  0px 0 100px 0px rgb(8, 197, 255);
+  background-color: rgba(8, 197, 255, 0.3);
   letter-spacing: -2px;
 }
 .powerbowl a:hover{
   filter: hue-rotate(110deg);
 }
 .neonsign{
-  width: 100vw;
-  max-width: 380px;
+  width: 250vw;
+  max-width: 480px;
   height: auto;
-  margin: 10px auto -10px auto;
-  box-shadow: 0px 0 100px -25px rgba(55, 165, 255, 0.39);
+  margin: -30px 0 -50px 0;
 }
 .poster{
   width: 70vw;
