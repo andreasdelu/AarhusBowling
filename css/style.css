@@ -38,8 +38,8 @@ header {
 
 .logo {
   display: block;
-  margin: 18px 0 18px 20px;
-  height: 48px;
+  margin: 15px 0 15px 20px;
+  height: 50px;
 }
 
 .logo img{
@@ -98,13 +98,13 @@ header {
     font-weight: 300;
     font-size: 1.5rem;
     margin-right: 20px;
-    width: 65%;
+    width: 70vw;
     padding: 5px 2rem 5px 20px;
 }
 .menu li a:last-child{
     margin-right: 20px;
     padding-right: 0;
-    width: 75%;
+    width: 100vw;
 }
 .menu li a:hover{
     background-color: var(--blue);
@@ -136,15 +136,19 @@ header {
     top: 0;
     right: 0;
     font-size: 2rem;
-    padding: 0 40px !important;
+    padding: 0 !important;
     margin: 0 28px 0 0;
     color: var(--blue);
     transition: 0.1s;
 }
-.arrow:hover{
-  transform: rotateZ(90deg);
+.dropmenu::before{
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 60px;
+  top: 0px;
+  right: 10px;
 }
-
 .dropdown{
   width: 100vw;
   display: none;
@@ -162,17 +166,18 @@ header {
     font-size: 1.2rem;
     text-decoration: none;
     font-weight: 300;
-    padding: 5px 0px 5px 20px !important;
+    width: 70vw!important;
+    padding: 5px 0 5px 20px !important;
 }
 .dropdown li a:hover{
   color: var(--blue);
   background-color: white;
 }
-.arrow:hover+.dropdown{
+.dropmenu:hover .dropdown{
   display: block;
 }
-.dropdown:hover{
-  display: block;
+.dropmenu:hover .arrow{
+  transform: rotateZ(90deg);
 }
 /* .closedropdown:hover + .dropdown{
   display: none;
@@ -197,7 +202,7 @@ header {
 /********** Content **********/
 
 .hero1 {
-  background-image: linear-gradient(rgba(0, 0, 200, 0.2), rgba(0, 0, 200, 0.2)), url("../images/bowle1.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 200, 0.1), rgba(58, 58, 163, 0.5)), url("../images/bowle1.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -266,7 +271,7 @@ h1 {
 /********** PowerBowling **********/
 
 .power {
-  background-image: linear-gradient(rgba(0, 0, 50, 0.4), rgba(0, 0, 50, 0.4)), url("../images/powerpreview.png");
+  background-image: linear-gradient(rgba(126, 126, 126, 0.1), rgba(25, 25, 54, 0.8)), url("../images/powerpreview.png");
   width: 100vw;
   height: 100vw;
   margin: 0;
@@ -311,7 +316,7 @@ h1 {
 /********** Buffet **********/
 
 .buffet {
-    background-image: url("../images/buffetbillede.jpg");
+    background-image: linear-gradient(rgba(126, 126, 126, 0.1), rgba(25, 25, 54, 0.8)), url("../images/buffetbillede.jpg");
     width: 100vw;
     height: 100vw;
     margin: 0;
@@ -484,6 +489,10 @@ footer p {
 
 
 /********** Fest & Events **********/
+.festevents.html body {
+  width: 100%; 
+}
+
 .festover
 {
   display: flex; 
@@ -610,32 +619,38 @@ footer p {
 
 /********** Nyhedsbrev **********/
 
-.nyhedsbrev 
+.overnyhed 
 {
-<<<<<<< Updated upstream
-   
-=======
-  position: relative; 
-  width: 100%;
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
+  display: flex;
+  justify-content: center;
+  padding-top: 3vw; 
+  padding-left: auto; 
+  padding-right: auto;
+  color: var(--blue); 
 }
 
-.nyhedsbrev::before 
+.undernyhed
 {
-  content: ""; 
-  background-image: url('../images/favicon.svg');
-  background-size: 100vw; 
-  position: absolute;
+  color: var(--blue);
+  margin-left: 3vw; 
+}
+
+.underpunkterny 
+{
+  color: var(--blue);
+  font-size: 1.3rem;  
+}
+.underpunkterny li 
+{
+  margin: 0 0 10px 0; 
+}
+#inputtekst
+{
   display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  opacity: 0.2; 
-  top: 10px; 
-  right: 0px; 
-  left: 0px; 
->>>>>>> Stashed changes
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px; 
+  margin-bottom: 5px; 
 }
 
 
