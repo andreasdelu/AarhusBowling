@@ -64,6 +64,10 @@ header {
   overflow-x: hidden;
 }
 
+.menuactive{
+  display: flex;
+}
+
 .menu ul{
     list-style-type: none;
     list-style-position: inside;
@@ -117,6 +121,7 @@ header {
     width: 34px;
     margin: 0;
     margin-right: 20px;
+    cursor: pointer;
 }
 .menu li {
   position: relative;
@@ -135,6 +140,7 @@ header {
     margin: 0 28px 0 0;
     color: var(--blue);
     transition: 0.1s;
+    cursor: pointer;
 }
 .arrowactive{
   transform: rotateZ(90deg);
@@ -160,7 +166,7 @@ header {
     font-size: 1.3rem;
     text-decoration: none;
     font-weight: 300;
-    padding: 5px 0px 5px 20px !important;
+    padding: 5px 100vw 5px 20px !important;
 }
 .dropdown li a:hover{
   color: var(--blue);

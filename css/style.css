@@ -118,6 +118,7 @@ header {
     width: 34px;
     margin: 0;
     margin-right: 20px;
+    padding: 0px 0px 30px 20px;
 }
 .burger:hover .menu{
     display: flex;
@@ -135,7 +136,7 @@ header {
     top: 0;
     right: 0;
     font-size: 2rem;
-    padding: 0 !important;
+    padding: 0 40px !important;
     margin: 0 28px 0 0;
     color: var(--blue);
     transition: 0.1s;
@@ -170,7 +171,10 @@ header {
 .arrow:hover+.dropdown{
   display: block;
 }
-.closedropdown:hover + .dropdown{
+.dropdown:hover{
+  display: block;
+}
+/* .closedropdown:hover + .dropdown{
   display: none;
 }
 .closedrop{
@@ -182,7 +186,7 @@ header {
   right: 32px;
   margin: 0;
   padding: 0;
-}
+} */
 
 
 
