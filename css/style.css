@@ -20,8 +20,20 @@ body {
   background-color: var(--grey);
   font-size: 16px;
   font-family: var(--halcom);
-  /* overflow-x: hidden; */
+  overflow: overlay;
+  overflow-x: hidden;
 }
+
+/********** Scrollbar **********/
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--blue);
+  border-radius: 200px;
+}
+
 
 /********** Navigation **********/
 
@@ -46,6 +58,7 @@ header {
 
 .logo img{
   height: 100%;
+  width: auto;
 }
 
 .burger {
@@ -434,13 +447,12 @@ footer p {
 
 /********** PowerBowling-underside **********/
 
-.hero2 {
-  background-image: url("../images/neonmobil.jpg");
+.powerbowl {
+  background-image: url("../images/wall.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
   width: 100vw;
-  min-height: 1174px;
   margin: 0;
   padding: 0;
   display: flex;
@@ -448,20 +460,20 @@ footer p {
   align-items:center;
   flex-direction: column;
 }
-.hero2 a {
-  margin-top: auto;
-  margin-bottom: 50px;
+.powerbowl a {
+  margin-top: 20px;
+  margin-bottom: 40px;
   display: block;
   font-size: 2rem;
-  font-weight: 200;
-  color: rgb(85, 201, 255);
+  font-weight: 300;
+  color: rgb(138, 218, 255);
   text-shadow:
   0px 0 10px rgb(50, 173, 255),
   0px 0 30px rgb(8, 197, 255),
   0px 0 100px rgb(64, 173, 224);
   text-decoration: none;
   padding: 10px;
-  border: 2px solid rgb(85, 201, 255); 
+  border: 2px solid rgb(138, 218, 255); 
   border-radius: 20px;
   box-shadow: 
   0px 0 10px -10px rgb(135, 226, 217),
@@ -469,28 +481,48 @@ footer p {
   background-color: rgba(8, 197, 255, 0.37);
   letter-spacing: -2px;
 }
-.hero2 a:hover{
+.powerbowl a:hover{
   filter: hue-rotate(110deg);
-} 
+}
+.neonsign{
+  width: 100vw;
+  max-width: 380px;
+  height: auto;
+  margin: 10px auto -10px auto;
+  box-shadow: 0px 0 100px -25px rgba(55, 165, 255, 0.39);
+}
+.poster{
+  width: 70vw;
+  max-width: 300px;
+  height: auto;
+  margin: 0px auto 30px auto;
+}
+
+/********** Video **********/
+
+.videocontainer{
+  width: 100vw;
+  max-width: 500px;
+  height: auto;
+  position: relative;
+  margin-bottom: 20px;
+}
 
 #video{
-  width: 100vw;
+  width: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   position: relative;
-  z-index: 10;
 }
-#video::after{
-  content: '';
-  width: 100%;
-  height: 100%;
+.videooverlay{
   position: absolute;
-  opacity: 0.6;
-  background-image: linear-gradient(black, blue);
   top: 0;
   left: 0;
-  z-index: 20;
+  width: 100vw;
+  height: 100%;
+  opacity: 0.2;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.103) 40%, rgb(20, 46, 119));
 }
 
 

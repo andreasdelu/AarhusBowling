@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Drengene" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
+    <meta name="description" content="Power bowling i Århus Bowlinghal" />
+    <meta name="keywords" content="bowling, århus, buffet" />
     <title>Århus Bowlinghal</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
@@ -14,31 +14,80 @@
 </head>
 <body>
 
-    <header>
-            <img class="logo" src="images/logo.svg" alt="Århus Bowlinghal Logo SVG">
+  <header>
+    <a class="logo" href="index.html"><img src="images/logo.svg" alt="Århus Bowlinghal Logo SVG"></a>
 
-            <div class="burger">
-                <img class="menuicon" src="images/menuicon.svg" alt="">
-                <nav class="menu">
-                    <ul>
-                        <li><a href="">Fest & Events</a></li>
-                        <li><a href="">Menukort</a></li>
-                        <li><a href="">Tider & Priser</a></li>
-                        <li><a href="">Om Os</a></li>
+    <div class="burger">
+        <img class="menuicon" src="images/menuicon.svg" alt="Menu icon">
+        <nav class="menu">
+            <ul>
+                <li>
+                  <a href="">Fest & Events</a>
+                  <div class="dropmenu">
+                    <p class="arrow">▸</p>
+                    <ul class="dropdown">
+                      <li><a href="">Børnefødselsdag</a></li>
+                      <li><a href="">Blå Mandag</a></li>
+                      <li><a href="">Klubbowling & Halturneringer</a></li>
+                      <li><a href="">Kalender</a></li>
                     </ul>
-                    <a class="bookdropdown" href="">Book nu</a>
-                </nav>
-            </div>
-    </header>
+                  </div>
+                </li>
+                <li>
+                  <a href="">Menukort</a>
+                  <div class="dropmenu">
+                    <p class="arrow">▸</p>
+                    <ul class="dropdown">
+                      <li><a href="">Amerikansk buffet & Julebuffet</a></li>
+                      <li><a href="">Roast n' Bowl</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="">Tider & Priser</a>
+                  <div class="dropmenu">
+                    <p class="arrow">▸</p>
+                    <ul class="dropdown">
+                      <li><a href="">Power Bowling</a></li>
+                      <li><a href="">Torsdags Power Bowling</a></li>
+                      <li><a href="">Studierabat</a></li>
+                      <li><a href="">Gavekort</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="">Om Os</a>
+                  <div class="dropmenu">
+                    <p class="arrow">▸</p>
+                    <ul class="dropdown">
+                      <li><a href="">Kontakt Os</a></li>
+                      <li><a href="">Spørgsmål & Svar</a></li>
+                      <li><a href="">Anmeldelser</a></li>
+                      <li><a href="">Åbningstider</a></li>
+                    </ul>
+                  </div>
+                </li>
+            </ul>
+            <a class="bookdropdown" href="">Book nu</a>
+        </nav>
+    </div>
+  </header>
 
-    <main>
-      <video id="video" src="videos/powerbowling.mp4" autoplay loop muted></video>
-      <section class="hero2">
+    <main id="powerbowling">
+      <section class="powerbowl">
+        <img class="neonsign" src="images/neonsign.webp" alt="">
+        <div class="videocontainer">
+          <video id="video" autoplay muted>
+            <source src="videos/powerbowling.webm" type="video/webm">
+          Your browser does not support the video tag.
+          </video>
+          <!-- <div class="videooverlay"></div> -->
+        </div>
         <a href="http://web.flexybox.com/internetbooking/banebooking.asp?cID=154">
           BOOK NU
           <!-- <img class="bookpower" src="images/bookblue.svg" alt="Booking Power Bowling"> -->
         </a>
-
+        <img class="poster" src="images/poster.webp" alt="">
       </section> 
     </main> 
 
