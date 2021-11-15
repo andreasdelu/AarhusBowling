@@ -209,7 +209,7 @@ header {
 }
 
 h1 {
-  color: white;
+  color: rgb(255, 255, 255);
   margin-top: 0;
   text-align: center;
   margin: auto 0;
@@ -407,7 +407,7 @@ footer {
 
 .kontakt {
   padding-top: 18px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 footer h3 {
@@ -454,20 +454,21 @@ footer p {
 }
 .hero2 a {
   text-decoration: none;
-  color: #0f1972;
+  color: rgb(255, 255, 255);
   text-shadow:
-      0 0 7px #0f1972,
-      0 0 10px #0f1972,
-      0 0 21px #0f1972,
-      0 0 42px #0fa,
-      0 0 82px #0fa,
-      0 0 92px #0fa,
-      0 0 102px #0fa,
-      0 0 151px #0fa;
-  font-weight: 500;
-  font-size: 1.5rem;
+      0 0 7px rgb(255, 255, 255),
+      0 0 10px rgb(0, 47, 255),
+      0 0 21px rgb(0, 38, 255),
+      0 0 42px #0f1972,
+      0 0 82px #0f1972,
+      0 0 92px #0f1972,
+      0 0 102px #0f1972,
+      0 0 151px #0f1972;
+      border: 2px solid rgb(255, 255, 255);
+  font-weight: 300;
+  font-size: 3rem;
   /* background-color: var(--blue); */
-  border-radius: 200px;
+  border-radius: 10px;
   margin-top: 1070px;
   margin-bottom: auto;
   padding: 5px 15px 5px 15px;
@@ -603,11 +604,34 @@ footer p {
   padding: 5px 10px 5px 10px; 
 }
 
-/********** Fest & Events **********/
+/********** Nyhedsbrev **********/
 
-.nyhedssite
+.nyhedsbrev 
 {
+<<<<<<< Updated upstream
    
+=======
+  position: relative; 
+  width: 100%;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+}
+
+.nyhedsbrev::before 
+{
+  content: ""; 
+  background-image: url('../images/favicon.svg');
+  background-size: 100vw; 
+  position: absolute;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  opacity: 0.2; 
+  top: 10px; 
+  right: 0px; 
+  left: 0px; 
+>>>>>>> Stashed changes
 }
 
 
