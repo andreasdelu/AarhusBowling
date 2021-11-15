@@ -20,7 +20,6 @@ body {
   background-color: var(--grey);
   font-size: 16px;
   font-family: var(--halcom);
-  /* overflow-x: hidden; */
 }
 
 /********** Navigation **********/
@@ -38,8 +37,8 @@ header {
 
 .logo {
   display: block;
-  margin: 15px 0 15px 20px;
-  height: 50px;
+  margin: 18px 0 18px 20px;
+  height: 48px;
 }
 
 .logo img{
@@ -54,7 +53,7 @@ header {
 
 .burger .menu {
   position: absolute;
-  box-shadow: 0 10px 20px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 20px 20px 2px rgba(0, 0, 0, 0.342);
   background-color: var(--grey);
   display: none;
   flex-direction: column;
@@ -63,6 +62,10 @@ header {
   top: 100%;
   padding-bottom: 20px;
   overflow-x: hidden;
+}
+
+.menuactive{
+  display: flex;
 }
 
 .menu ul{
@@ -98,13 +101,13 @@ header {
     font-weight: 300;
     font-size: 1.5rem;
     margin-right: 20px;
-    width: 70vw;
+    width: 65%;
     padding: 5px 2rem 5px 20px;
 }
 .menu li a:last-child{
     margin-right: 20px;
     padding-right: 0;
-    width: 100vw;
+    width: 100%;
 }
 .menu li a:hover{
     background-color: var(--blue);
@@ -118,10 +121,7 @@ header {
     width: 34px;
     margin: 0;
     margin-right: 20px;
-    padding: 0px 0px 30px 20px;
-}
-.burger:hover .menu{
-    display: flex;
+    cursor: pointer;
 }
 .menu li {
   position: relative;
@@ -140,21 +140,21 @@ header {
     margin: 0 28px 0 0;
     color: var(--blue);
     transition: 0.1s;
+    cursor: pointer;
 }
-.dropmenu::before{
-  content: '';
-  position: absolute;
-  width: 50px;
-  height: 60px;
-  top: 0px;
-  right: 10px;
+.arrowactive{
+  transform: rotateZ(90deg);
+  transition: 0.2s;
 }
 .dropdown{
   width: 100vw;
   display: none;
   background-color: var(--blue);
   padding-top: 10px;
-  padding-bottom: 5px;
+  padding-bottom: 1px;
+}
+.dropdownactive{
+  display: block;
 }
 .dropdown li{
   margin-bottom: 15px;
@@ -163,36 +163,97 @@ header {
 .dropdown li a{
     display: block;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     text-decoration: none;
     font-weight: 300;
-    width: 70vw!important;
-    padding: 5px 0 5px 20px !important;
+    padding: 5px 100vw 5px 20px !important;
 }
 .dropdown li a:hover{
   color: var(--blue);
   background-color: white;
 }
-.dropmenu:hover .dropdown{
-  display: block;
+.topline{
+  transform-origin: right;
+  transition: 0.2s;
 }
-.dropmenu:hover .arrow{
-  transform: rotateZ(90deg);
+.midline{
+  transition: 0.2s;
 }
-/* .closedropdown:hover + .dropdown{
-  display: none;
+.botline{
+  transform-origin: right;
+  transition: 0.2s;
 }
-.closedrop{
-  color: white;
-  font-size: 1.2rem;
-  font-weight: 300;
-  position: absolute;
-  top: 10px;
-  right: 32px;
-  margin: 0;
-  padding: 0;
-} */
 
+.topon{
+  animation: menutopanim 0.2s linear 0.1s forwards;
+}
+.midon{
+  animation: menumidanim 0.1s linear forwards;
+}
+.boton{
+  animation: menubotanim 0.2s linear 0.1s forwards;
+}
+
+.topoff{
+  animation: topoutanim 0.2s linear forwards;
+}
+.midoff{
+  transform: scaleX(0);
+  animation: midoutanim 0.1s linear 0.1s forwards;
+}
+.botoff{
+  animation: botoutanim 0.2s linear forwards;
+}
+
+@keyframes menutopanim {
+  from{
+    transform: translateY(0%) rotateZ(0deg);
+  }
+  to{
+    transform: translateY(-3px) rotateZ(-45deg);
+  }
+}
+
+@keyframes menumidanim {
+  from{
+    transform: scaleX(1);
+  }
+  to{
+    transform: scaleX(0);
+  }
+}
+@keyframes menubotanim {
+  from{
+    transform: translateY(0%) rotateZ(0deg);
+  }
+  to{
+    transform: translateY(8px) rotateZ(45deg);
+  }
+}
+@keyframes topoutanim {
+  from{
+    transform: translateY(-3px) rotateZ(-45deg);
+  }
+  to{
+    transform: translateY(0%) rotateZ(0deg);
+  }
+}
+@keyframes midoutanim {
+  from{
+    transform: scaleX(0);
+  }
+  to{
+    transform: scaleX(1);
+  }
+}
+@keyframes botoutanim {
+  from{
+    transform: translateY(8px) rotateZ(45deg);
+  }
+  to{
+    transform: translateY(0%) rotateZ(0deg);
+  }
+}
 
 
 
@@ -202,7 +263,7 @@ header {
 /********** Content **********/
 
 .hero1 {
-  background-image: linear-gradient(rgba(0, 0, 200, 0.1), rgba(58, 58, 163, 0.5)), url("../images/bowle1.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 200, 0.2), rgba(0, 0, 200, 0.2)), url("../images/bowle1.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -218,7 +279,7 @@ header {
 }
 
 h1 {
-  color: rgb(255, 255, 255);
+  color: white;
   margin-top: 0;
   text-align: center;
   margin: auto 0;
@@ -271,7 +332,7 @@ h1 {
 /********** PowerBowling **********/
 
 .power {
-  background-image: linear-gradient(rgba(126, 126, 126, 0.1), rgba(25, 25, 54, 0.8)), url("../images/powerpreview.png");
+  background-image: linear-gradient(rgba(0, 0, 50, 0.4), rgba(0, 0, 50, 0.4)), url("../images/powerpreview.png");
   width: 100vw;
   height: 100vw;
   margin: 0;
@@ -316,7 +377,7 @@ h1 {
 /********** Buffet **********/
 
 .buffet {
-    background-image: linear-gradient(rgba(126, 126, 126, 0.1), rgba(25, 25, 54, 0.8)), url("../images/buffetbillede.jpg");
+    background-image: url("../images/buffetbillede.jpg");
     width: 100vw;
     height: 100vw;
     margin: 0;
@@ -416,7 +477,7 @@ footer {
 
 .kontakt {
   padding-top: 18px;
-  margin-bottom: 0px;
+  margin-bottom: 20px;
 }
 
 footer h3 {
@@ -463,21 +524,20 @@ footer p {
 }
 .hero2 a {
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: #0f1972;
   text-shadow:
-      0 0 7px rgb(255, 255, 255),
-      0 0 10px rgb(0, 47, 255),
-      0 0 21px rgb(0, 38, 255),
-      0 0 42px #0f1972,
-      0 0 82px #0f1972,
-      0 0 92px #0f1972,
-      0 0 102px #0f1972,
-      0 0 151px #0f1972;
-      border: 2px solid rgb(255, 255, 255);
-  font-weight: 300;
-  font-size: 3rem;
+      0 0 7px #0f1972,
+      0 0 10px #0f1972,
+      0 0 21px #0f1972,
+      0 0 42px #0fa,
+      0 0 82px #0fa,
+      0 0 92px #0fa,
+      0 0 102px #0fa,
+      0 0 151px #0fa;
+  font-weight: 500;
+  font-size: 1.5rem;
   /* background-color: var(--blue); */
-  border-radius: 10px;
+  border-radius: 200px;
   margin-top: 1070px;
   margin-bottom: auto;
   padding: 5px 15px 5px 15px;
@@ -489,10 +549,6 @@ footer p {
 
 
 /********** Fest & Events **********/
-.festevents.html body {
-  width: 100%; 
-}
-
 .festover
 {
   display: flex; 
@@ -617,40 +673,10 @@ footer p {
   padding: 5px 10px 5px 10px; 
 }
 
-/********** Nyhedsbrev **********/
+/********** Fest & Events **********/
 
-.overnyhed 
+.nyhedssite
 {
-  display: flex;
-  justify-content: center;
-  padding-top: 3vw; 
-  padding-left: auto; 
-  padding-right: auto;
-  color: var(--blue); 
-}
-
-.undernyhed
-{
-  color: var(--blue);
-  margin-left: 3vw; 
-}
-
-.underpunkterny 
-{
-  color: var(--blue);
-  font-size: 1.3rem;  
-}
-.underpunkterny li 
-{
-  margin: 0 0 10px 0; 
-}
-#inputtekst
-{
-  display: flex; 
-  justify-content: center;
-  flex-direction: column;
-  margin: 10px; 
-  margin-bottom: 5px; 
-}
+} 
 
 

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Drengene" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <title>Århus Bowlinghal</title>
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <link rel="stylesheet" href="css/styletest.css">
+    <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/favicon.svg">
+</head>
+<body>
+
+    <header>
+            <a class="logo" href="index.html"><img src="images/logo.svg" alt="Århus Bowlinghal Logo SVG"></a>
+            <div class="burger">
+                <!-- <img id="burger" class="menuicon" src="images/menuicon.svg" alt="Menu icon"> -->
+                <svg id="burger" class="menuicon" version="1.1" id="L2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+                  <style type="text/css">
+                    .menuline{stroke: #0F1972; stroke-width:4;}
+                  </style>
+                  <line id="topline" class="topline menuline" x1="30" x2="2" y1="8" y2="8"/>
+                  <line id="midline" class="midline menuline" x1="30" x2="2" y1="16" y2="16"/>
+                  <line id="botline" class="botline menuline" x1="30" x2="2" y1="24" y2="24"/>
+                </svg>
+                <nav id="menu" class="menu">
+                    <ul>
+                        <li>
+                          <a href="">Fest & Events</a>
+                          <div id="arrow1" class="arrow">▸</div>
+                          <ul id="drop1" class="dropdown">
+                            <li><a href="">Børnefødselsdag</a></li>
+                            <li><a href="">Blå Mandag</a></li>
+                            <li><a href="">Klubbowling & Halturneringer</a></li>
+                            <li><a href="">Kalender</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <a href="">Menukort</a>
+                          <p id="arrow2" class="arrow">▸</p>
+                          <ul id="drop2" class="dropdown">
+                            <li><a href="">Børnefødselsdag</a></li>
+                            <li><a href="">Blå Mandag</a></li>
+                            <li><a href="">Klubbowling & Halturneringer</a></li>
+                            <li><a href="">Kalender</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <a href="">Tider & Priser</a>
+                          <p id="arrow3" class="arrow">▸</p>
+                          <ul id="drop3" class="dropdown">
+                            <li><a href="">Børnefødselsdag</a></li>
+                            <li><a href="">Blå Mandag</a></li>
+                            <li><a href="">Klubbowling & Halturneringer</a></li>
+                            <li><a href="">Kalender</a></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <a href="">Om Os</a>
+                        </li>
+                    </ul>
+                    <a class="bookdropdown" href="">Book nu</a>
+                </nav>
+            </div>
+    </header>
+
+    <main>
+      <section class="hero1">
+        <h1> Bowling i hjertet af Aarhus </h1>
+        <a href="http://web.flexybox.com/internetbooking/banebooking.asp?cID=154">Book nu</a>
+      </section>
+
+      <section class="parkering">
+        <h2>GRATIS PARKERING</h2>
+        <h3>Ved registrering af bil i reception</h3>
+        
+      </section>
+      <section class="power">
+        <h2> Power Bowling </h2>
+        <a href="https://www.aarhusbowlinghal.dk/tider-priser/"> Læs mere </a>
+      </section>
+
+      <section class="buffet">
+        <h2> Buffet </h2>
+        <a href="https://www.aarhusbowlinghal.dk/amerikansk-buffet-the-taste-of-america/"> Læs mere </a>
+      </section>
+      
+      <section class="nyhed">
+        <h2>TILMELD DIG VORES NYHEDSBREV </h2>
+        <a href="https://aarhusbowlinghal.us10.list-manage.com/subscribe?u=a868820104020ffbffca4372e&id=879cccffb7">Tilmeld</a>
+          
+      </section>
+    </main> 
+
+    <footer>
+        <div class="kontakt">
+            <h3>Kontakt</h3>
+            <hr>
+            <p>Telefonnr: +45 86 12 52 00</p>
+            <p>aarhusbowlinghal@mail.dk</p>
+            <p><a href="https://www.facebook.com/Aarhusbowlinghal">Facebook</a></p>
+        </div>
+        <div class="adresse">
+            <h3>Adresse</h3>
+            <hr>
+            <p>Aarhus Bowlinghal</p>
+            <p>Eckersbergsgade 13A-15 </p>
+            <p>8000 Aarhus C</p>
+        </div>
+        
+      
+    </footer>
+    <script>
+      const burger = document.getElementById("burger");
+      const menu = document.getElementById("menu");
+      const arrow1 = document.getElementById("arrow1");
+      const arrow2 = document.getElementById("arrow2");
+      const arrow3 = document.getElementById("arrow3");
+      const dropdown1 = document.getElementById("drop1");
+      const dropdown2 = document.getElementById("drop2");
+      const dropdown3 = document.getElementById("drop3");
+      const line1 = document.getElementById("topline");
+      const line2 = document.getElementById("midline");
+      const line3 = document.getElementById("botline");
+      
+      burger.addEventListener("click", showMenu);
+      
+      arrow1.addEventListener("click", showDrop1);
+      arrow2.addEventListener("click", showDrop2);
+      arrow3.addEventListener("click", showDrop3);
+
+      var active = false;
+
+      function showMenu() {
+        if (!active) {
+          menu.style.display = "flex";
+          active = true;
+          line1.classList.remove("topoff");
+          line2.classList.remove("midoff");
+          line3.classList.remove("botoff");
+          line1.classList.add("topon");
+          line2.classList.add("midon");
+          line3.classList.add("boton");
+        }
+        else{
+          menu.style.display = "none";
+          active = false;
+          arrow1.classList.remove("arrowactive");
+          dropdown1.classList.remove("dropdownactive");
+          arrow2.classList.remove("arrowactive");
+          dropdown2.classList.remove("dropdownactive");
+          arrow3.classList.remove("arrowactive");
+          dropdown3.classList.remove("dropdownactive");
+          line1.classList.add("topoff");
+          line2.classList.add("midoff");
+          line3.classList.add("botoff");
+          line1.classList.remove("topon");
+          line2.classList.remove("midon");
+          line3.classList.remove("boton");
+        }
+      }
+
+      function showDrop1() {
+          if (!arrow1.classList.contains("arrowactive")) {
+            arrow1.classList.add("arrowactive");
+            dropdown1.classList.add("dropdownactive");
+            arrow2.classList.remove("arrowactive");
+            dropdown2.classList.remove("dropdownactive");
+            arrow3.classList.remove("arrowactive");
+            dropdown3.classList.remove("dropdownactive");
+          }
+          else{
+            arrow1.classList.remove("arrowactive");
+            dropdown1.classList.remove("dropdownactive");
+          }
+      }
+      function showDrop2() {
+          if (!arrow2.classList.contains("arrowactive")) {
+            arrow2.classList.add("arrowactive");
+            dropdown2.classList.add("dropdownactive");
+            arrow1.classList.remove("arrowactive");
+            dropdown1.classList.remove("dropdownactive");
+            arrow3.classList.remove("arrowactive");
+            dropdown3.classList.remove("dropdownactive");
+          }
+          else{
+            arrow2.classList.remove("arrowactive");
+            dropdown2.classList.remove("dropdownactive");
+          }
+      }
+      function showDrop3() {
+          if (!arrow3.classList.contains("arrowactive")) {
+            arrow3.classList.add("arrowactive");
+            dropdown3.classList.add("dropdownactive");
+            arrow2.classList.remove("arrowactive");
+            dropdown2.classList.remove("dropdownactive");
+            arrow1.classList.remove("arrowactive");
+            dropdown1.classList.remove("dropdownactive");
+          }
+          else{
+            arrow3.classList.remove("arrowactive");
+            dropdown3.classList.remove("dropdownactive");
+          }
+      }
+
+    </script>
+  </body>
+</html>
