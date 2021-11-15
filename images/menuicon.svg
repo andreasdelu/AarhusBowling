@@ -5,7 +5,7 @@
 <style type="text/css">
 	.st0{fill:#0F1972;}
 </style>
-<rect class="topline" x="2" y="6" class="st0" width="28" height="4"/>
-<rect class="midline" x="2" y="14" class="st0" width="28" height="4"/>
-<rect class="botline" x="2" y="22" class="st0" width="28" height="4"/>
+<rect x="2" y="6" class="st0" width="28" height="4"/>
+<rect x="2" y="14" class="st0" width="28" height="4"/>
+<rect x="2" y="22" class="st0" width="28" height="4"/>
 </svg>

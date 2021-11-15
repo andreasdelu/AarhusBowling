@@ -8,7 +8,7 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <title>Århus Bowlinghal</title>
-    <link rel="stylesheet" href="css/reset.css">
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
     <link rel="stylesheet" href="css/styletest.css">
     <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
     <link rel="apple-touch-icon" href="images/favicon.svg">
@@ -23,7 +23,6 @@
                     viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
                   <style type="text/css">
                     .menuline{stroke: #0F1972; stroke-width:4;}
-
                   </style>
                   <line id="topline" class="topline menuline" x1="30" x2="2" y1="8" y2="8"/>
                   <line id="midline" class="midline menuline" x1="30" x2="2" y1="16" y2="16"/>
@@ -128,12 +127,13 @@
       const line1 = document.getElementById("topline");
       const line2 = document.getElementById("midline");
       const line3 = document.getElementById("botline");
-
+      
+      burger.addEventListener("click", showMenu);
+      
       arrow1.addEventListener("click", showDrop1);
       arrow2.addEventListener("click", showDrop2);
       arrow3.addEventListener("click", showDrop3);
 
-      burger.addEventListener("click", showMenu);
       var active = false;
 
       function showMenu() {
