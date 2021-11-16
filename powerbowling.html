@@ -7,7 +7,7 @@
     <meta name="author" content="Drengene" />
     <meta name="description" content="Power bowling i Århus Bowlinghal" />
     <meta name="keywords" content="bowling, århus, buffet" />
-    <title>Århus Bowlinghal</title>
+    <title>Power Bowling</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
     <link rel="apple-touch-icon" href="images/favicon.svg">
@@ -82,7 +82,6 @@
         <li class="menupunkter">
           <a href="">Fest & Events</a>
           <div class="widedropmenu">
-            <p class="arrow">▸</p>
             <ul class="widedropdown">
               <li><a href="">Børnefødselsdag</a></li>
               <li><a href="">Blå Mandag</a></li>
@@ -94,7 +93,6 @@
         <li class="menupunkter">
           <a href="">Menukort</a>
           <div class="widedropmenu">
-            <p class="arrow">▸</p>
             <ul class="widedropdown">
               <li><a href="">Amerikansk buffet & Julebuffet</a></li>
               <li><a href="">Roast n' Bowl</a></li>
@@ -104,7 +102,6 @@
         <li class="menupunkter">
           <a href="">Tider & Priser</a>
           <div class="widedropmenu">
-            <p class="arrow">▸</p>
             <ul class="widedropdown">
               <li><a href="">Power Bowling</a></li>
               <li><a href="">Torsdags Power Bowling</a></li>
@@ -116,7 +113,6 @@
         <li class="menupunkter">
           <a href="">Om Os</a>
           <div class="widedropmenu">
-            <p class="arrow">▸</p>
             <ul class="widedropdown">
               <li><a href="">Kontakt Os</a></li>
               <li><a href="">Spørgsmål & Svar</a></li>
@@ -134,8 +130,17 @@
 
     <main id="powerbowling">
       <section class="powerbowl">
-        <img class="neonsign" src="images/neonsign.webp" alt="">
-        <div class="videocontainer">
+        <div class="neoncontainer">
+          <img class="poster p1" src="images/poster.webp" alt="Plakat med tider">
+          <div class="videocontainer v1">
+            <video id="video" autoplay loop muted>
+              <source src="videos/powerbowling.webm" type="video/webm">
+            Your browser does not support the video tag.
+            </video>
+          </div>
+          <img class="neonsign" src="images/neonsign.webp" alt="Power bowling neon skilt">
+        </div>
+        <div class="videocontainer v2">
           <video id="video" autoplay loop muted>
             <source src="videos/powerbowling.webm" type="video/webm">
           Your browser does not support the video tag.
@@ -144,23 +149,24 @@
         <a href="http://web.flexybox.com/internetbooking/banebooking.asp?cID=154">
           BOOK NU
         </a>
-        <img class="poster" src="images/poster.webp" alt="">
+        <img class="poster p2" src="images/poster.webp" alt="Plakat med tider">
       </section>
       <section id="powerinfo">
         <details class="infotab">
-          <summary>Information</summary>
+          <summary>Praktisk Info</summary>
           <article>
             <h1>Power Bowling</h1> 
             <p>Torsdag 21:00 - 24:00</p>
             <p>Fredag 21:00 - 01:00</p>
             <p>Lørdag 21:00 - 01:00</p>
-            <p>Lysshow og 100 % god musik – Kom og vind shots på rød kegle</p>
-            <p>1 times power bowling pris pr. bane kr. 265,- (ekskl. skoleje)</p>
+            <p>Lysshow og 100 % god musik</p>
+            <p>Vind shots på rød kegle</p>
+            <p>1 times pris pr. bane kr. 265,- (ekskl. skoleje)</p>
             <p>Aldersgrænse min. 18 år</p>
             <p><strong>Max. 6 pers. pr. bane</strong></p>
             <h2>TILBUD!<br>Torsdags Power Bowling</h2>
             <p>Hver torsdag fra kl. 21-24</p>
-            <p>1 times power bowling pris pr. bane kr. 195,- (ekskl. skoleje)</p>
+            <p>1 times pris pr. bane kr. 195,- (ekskl. skoleje)</p>
             <p>Aldersgrænse min. 18 år</p>
             <p><strong>Max. 6 pers. pr. bane</strong></p>
           </article>
@@ -176,6 +182,7 @@
             <p>aarhusbowlinghal@mail.dk</p>
             <a href="https://www.facebook.com/Aarhusbowlinghal">Facebook</a> 
         </div>
+        <img class="footerimg" src="images/kuglekegle.svg" alt="Århus bowlinghal kugle og kegle">
         <div class="adresse">
             <h3>Adresse</h3>
             <hr>

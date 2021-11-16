@@ -43,8 +43,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
-  top: 0;
+  position: relative;
   margin: 0;
   padding: 0;
   z-index: 100;
@@ -167,6 +166,7 @@ header {
   background-color: var(--blue);
   padding-top: 10px;
   padding-bottom: 5px;
+  overflow-y: scroll;
 }
 .dropdown li{
   margin-bottom: 15px;
@@ -212,15 +212,23 @@ header {
   color: var(--blue);
   font-size: 1.1rem;
   font-weight: 300;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+.menupunkter a:hover{
+  background-color: var(--blue);
+  color: white;
 }
 .widedropmenu{
   display: none;
 }
 .book{
   margin-left: auto;
+  width: 195px;
   display: block;
 }
 .booking{
+  float: right;
   text-decoration: none;
   font-size: 1.1rem;
   color: white;
@@ -593,21 +601,28 @@ footer p {
 }
 .neonsign{
   width: 250vw;
-  max-width: 480px;
+  max-width: 550px;
   height: auto;
-  margin: -30px 0 -50px 0;
+  margin: -30px -50px -50px -50px;
 }
 .poster{
   width: 70vw;
-  max-width: 300px;
+  max-width: 280px;
   height: auto;
-  margin: 0px auto 30px auto;
+  margin: 0px 0 30px 0;
 }
-
+.p1{
+  display: none;
+}
+.neoncontainer{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
 #powerinfo article{
   margin: 0 0 20px 0;
 }
-
 #powerinfo h1, #powerinfo h2{
   margin: 10px 20px 5px 20px;
   font-size: 1.25rem;
@@ -631,8 +646,16 @@ footer p {
 .infotab summary{
   padding: 10px 20px;
   color: var(--blue);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   background-color: var(--grey);
+  text-align: center;
+  cursor: pointer;
+}
+
+.footerimg{
+  width: 100px;
+  opacity: 0.1;
+  display: none;
 }
 
 /********** Video **********/
@@ -653,18 +676,21 @@ footer p {
   box-sizing: border-box;
   position: relative;
 }
-.videooverlay{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100%;
-  opacity: 0.2;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.103) 40%, rgb(20, 46, 119));
+
+.v1{
+  display: none;
 }
 
 
 /********** Fest & Events **********/
+#festevents 
+{
+  display: flex; 
+  flex-direction: column;
+  height: 100%; 
+  width: 100%; 
+}
+
 #festover
 {
   text-align: center; 
@@ -674,24 +700,57 @@ footer p {
   font-size: 40px; 
 }
 
-.blå, .børne, .klub {
-  height: 100%; 
+#festevents ul{
+  margin-bottom: 5px;
+}
+
+#festevents li{
+  margin-bottom: 12px;
+}
+
+
+.blå, .børne, .klub { 
   font-size: 20px; 
-  margin: 5vw; 
-  display: flex;
+  margin-left: 20px; 
+  margin-bottom: 40px;
   color: white; 
-  flex-direction: column;
   background-color: var(--blue);
+  width: 500px; 
+  height: 500px;
   border-radius: 20px; 
   position: relative; 
-  z-index: 20; 
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+}
+
+.klub{
+  margin-right: 20px;
+}
+
+.infofest{
+  background-color: var(--grey);
+}
+.infofest[open] > summary{
+  border-bottom: 1px solid var(--blue);
+}
+.infofest ul{
+  margin: 5px 20px;
+}
+.infofest summary{
+  padding: 10px 20px;
+  color: var(--blue);
+  font-size: 1.4rem;
+  background-color: var(--grey);
+  text-align: center;
+  cursor: pointer;
 }
 
 .blå::before, .børne::before, .klub::before {
   content: ''; 
   background-image: url("../images/kuglekegle.svg");
   background-repeat: no-repeat; 
-  background-size: 50%; 
+  background-size: 300px; 
   background-position: 50% 100%; 
   position: absolute;
   width: 100%; 
@@ -700,22 +759,21 @@ footer p {
   z-index: -1; 
 }
 
-.blå h3, .klub h3, .børne h3 {
-  color: white;  
-  margin: 0 auto; 
-  max-width: 5ch; 
-  font-size: 4rem; 
-  z-index: 20; 
+.blå h2, .klub h2, .børne h2
+{
+  color: white; 
+  text-align: center;
+  margin-bottom: 5px;
 }
 
 .blå a, .klub a, .børne a  {
   text-decoration: none;
   color: white;
-  font-weight: 490;
+  font-weight: 500;
   font-size: 1.0rem;
   background-color: var(--blue);
-  border-radius: 200px;
-  margin: auto 0;    
+  margin: 0 auto;
+  border-radius: 200px; 
   padding: 5px 10px 5px 10px; 
 }
 .blå a:hover, .klub a:hover, .børne a:hover 
@@ -725,14 +783,15 @@ footer p {
 }
 
 /********** Nyhedsbrev **********/
+
 .baggrundnyhed
 {
   opacity: 0.10;
   position: fixed; 
-  top: 145px;
+  top: 100px;
   bottom: 0; 
-  width: 55.35vh; 
-  height: 55.35vh; 
+  width: 100vw; 
+  height: 100vw; 
   z-index: -5000; 
 }
 
@@ -803,14 +862,88 @@ footer p {
 
 #tilmeldknap::after {
   content: '';
-  width: 5%;
-  height: 5%;
-  right: 20px;
+  width: 25px;
+  height: 50px;
+  right: 25px;
   opacity: 0.7; 
   background-image: url("../images/nyhedsikonhvid.png");
   position: absolute; 
   background-size: contain;
   background-repeat: no-repeat;  
+}
+
+#tilmeldknap:hover {
+  background-color: white; 
+  color: var(--blue); 
+}
+
+#tilmeldknap:hover::after {
+  background-image: url("../images/nyhedsikon.png");  
+}
+
+@media screen and (min-width: 600px){
+
+  .footerimg{
+    display: block;
+  }
+
+}
+
+@media screen and (min-width: 500px){
+  
+  /********** Footer **********/
+
+  footer {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-color: var(--blue);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .kontakt,
+  .adresse {
+    padding-bottom: 5px;
+    width: 100%;
+    color: white;
+    text-align: center;
+  }
+
+  .kontakt, .adresse {
+    padding-top: 18px;
+    margin-bottom: 0px;
+    min-width: 250px;
+    max-width: 350px;
+  }
+
+  footer h3 {
+    margin-bottom: 2px;
+    margin-top: 0;
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+
+  footer hr {
+    margin: 0 20px;
+    border: none;
+    border-top: 1px solid white;
+  }
+  footer a {
+    font-weight: 200;
+    color: rgba(245, 245, 245, 0.87);
+    font-size: 1rem;
+  }
+  footer p {
+    font-weight: 200;
+    color: rgba(245, 245, 245, 0.87);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  
+
+
 }
 
 @media screen and (min-width: 840px) {
@@ -826,27 +959,13 @@ footer p {
   .widemenu{
     display: flex;
   }
-  
-}
 
-@media screen and (min-width: 1000px) {
-  
-  /********** Navigation **********/
-
-  .navbar{
-    list-style-type: none;
-    padding: 0;
-    margin: 0 auto;
-    width: 80%;
-    display: flex;
-    justify-content: space-evenly;
-  }
   /********** PowerBowling-underside **********/
 
   .powerbowl {
     background-image: url("../images/seamwall.webp");
     background-repeat:repeat;
-    background-size: 100%;
+    background-size: 60%;
     width: 100vw;
     margin: 0;
     padding: 0;
@@ -857,7 +976,7 @@ footer p {
     overflow-x: hidden;
   }
   .powerbowl a {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 40px;
     display: block;
     font-size: 2rem;
@@ -882,48 +1001,22 @@ footer p {
   }
   .neonsign{
     width: 250vw;
-    max-width: 480px;
+    max-width: 600px;
     height: auto;
-    margin: -30px 0 -50px 0;
+    margin: -50px -170px -50px -160px;
   }
   .poster{
     width: 70vw;
-    max-width: 300px;
+    max-width: 250px;
     height: auto;
-    margin: 0px auto 30px auto;
+    margin: 0px 0 30px 0;
   }
-
-  #powerinfo article{
-    margin: 0 0 20px 0;
+  .p1{
+    display: block;
   }
-
-  #powerinfo h1, #powerinfo h2{
-    margin: 10px 20px 5px 20px;
-    font-size: 1.25rem;
-    color: var(--blue);
-    max-width: none;
-    text-align: left;
+  .p2{
+    display: none;
   }
-
-  #powerinfo h2{
-    margin: 20px 20px 5px 20px;;
-  }
-  .infotab{
-    background-color: var(--grey);
-  }
-  .infotab[open] > summary{
-    border-bottom: 1px solid var(--blue);
-  }
-  .infotab p{
-    margin: 5px 20px;
-  }
-  .infotab summary{
-    padding: 10px 20px;
-    color: var(--blue);
-    font-size: 1.5rem;
-    background-color: var(--grey);
-  }
-
   /********** Video **********/
 
   .videocontainer{
@@ -932,6 +1025,7 @@ footer p {
     height: auto;
     position: relative;
     margin-bottom: 20px;
+    margin-top: -50px;
     box-shadow: 0 0 20px 0px rgb(0, 0, 0);
   }
 
@@ -942,13 +1036,74 @@ footer p {
     box-sizing: border-box;
     position: relative;
   }
-  .videooverlay{
-    position: absolute;
-    top: 0;
-    left: 0;
+  
+}
+
+@media screen and (min-width: 1000px) {
+  
+  /********** Navigation **********/
+
+  .navbar{
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    width: 75%;
+    display: flex;
+    justify-content: space-evenly;
+  } 
+
+  /********** FEST OG EVENTS **********/
+  
+  #festevents {
+    display: flex; 
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1350px)
+{
+  .videocontainer{
     width: 100vw;
-    height: 100%;
-    opacity: 0.2;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.103) 40%, rgb(20, 46, 119));
+    max-width: 600px;
+    height: auto;
+    position: relative;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    
+    box-shadow: 0 0 20px 0px rgb(0, 0, 0);
+  }
+  .neoncontainer{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 90%;
+    justify-content: space-between;
+  }
+  .v2{
+    display: none;
+  }
+  .v1{
+    display: block;
+  }
+  .powerbowl a {
+    margin-top: 0px;
+    margin-bottom: 70px;
+    display: block;
+    font-size: 2rem;
+    font-weight: 300;
+    color: rgb(138, 218, 255);
+    text-shadow:
+    0px 0 10px rgb(50, 173, 255),
+    0px 0 30px rgb(8, 197, 255),
+    0px 0 100px rgb(64, 173, 224);
+    text-decoration: none;
+    padding: 10px;
+    border: 2.5px solid rgb(138, 218, 255); 
+    border-radius: 20px;
+    box-shadow: 
+    0px 0 10px -10px rgb(135, 226, 217),
+    0px 0 100px 0px rgb(8, 197, 255);
+    background-color: rgba(8, 197, 255, 0.3);
+    letter-spacing: -2px;
   }
 }
