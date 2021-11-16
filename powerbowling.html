@@ -18,14 +18,20 @@
     <a class="logo" href="index.html"><img src="images/logo.svg" alt="Århus Bowlinghal Logo SVG"></a>
 
     <div class="burger">
-        <img class="menuicon" src="images/menuicon.svg" alt="Menu icon">
-        <nav class="menu">
+      <svg id="burger" class="menuicon" version="1.1" id="L2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+        <style type="text/css">.menuline{stroke: #0F1972; stroke-width:4;}</style>
+        <line id="topline" class="topline menuline" x1="30" x2="2" y1="8" y2="8"/>
+        <line id="midline" class="midline menuline" x1="30" x2="2" y1="16" y2="16"/>
+        <line id="botline" class="botline menuline" x1="30" x2="2" y1="24" y2="24"/>
+      </svg>
+        <nav id="menu" class="menu">
             <ul>
                 <li>
                   <a href="">Fest & Events</a>
                   <div class="dropmenu">
-                    <p class="arrow">▸</p>
-                    <ul class="dropdown">
+                    <p id="arrow1" class="arrow">▸</p>
+                    <ul id="drop1" class="dropdown">
                       <li><a href="">Børnefødselsdag</a></li>
                       <li><a href="">Blå Mandag</a></li>
                       <li><a href="">Klubbowling & Halturneringer</a></li>
@@ -36,8 +42,8 @@
                 <li>
                   <a href="">Menukort</a>
                   <div class="dropmenu">
-                    <p class="arrow">▸</p>
-                    <ul class="dropdown">
+                    <p id="arrow2" class="arrow">▸</p>
+                    <ul id="drop2" class="dropdown">
                       <li><a href="">Amerikansk buffet & Julebuffet</a></li>
                       <li><a href="">Roast n' Bowl</a></li>
                     </ul>
@@ -46,8 +52,8 @@
                 <li>
                   <a href="">Tider & Priser</a>
                   <div class="dropmenu">
-                    <p class="arrow">▸</p>
-                    <ul class="dropdown">
+                    <p id="arrow3" class="arrow">▸</p>
+                    <ul id="drop3" class="dropdown">
                       <li><a href="">Power Bowling</a></li>
                       <li><a href="">Torsdags Power Bowling</a></li>
                       <li><a href="">Studierabat</a></li>
@@ -58,8 +64,8 @@
                 <li>
                   <a href="">Om Os</a>
                   <div class="dropmenu">
-                    <p class="arrow">▸</p>
-                    <ul class="dropdown">
+                    <p id="arrow4" class="arrow">▸</p>
+                    <ul id="drop4" class="dropdown">
                       <li><a href="">Kontakt Os</a></li>
                       <li><a href="">Spørgsmål & Svar</a></li>
                       <li><a href="">Anmeldelser</a></li>
@@ -180,6 +186,6 @@
         
       
     </footer>
-
+    <script src="/js/script.js"></script>
   </body>
 </html>

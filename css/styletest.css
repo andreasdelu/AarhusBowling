@@ -142,10 +142,6 @@ header {
     transition: 0.1s;
     cursor: pointer;
 }
-.arrowactive{
-  transform: rotateZ(90deg);
-  transition: 0.2s;
-}
 .dropdown{
   width: 100vw;
   display: none;
@@ -153,24 +149,29 @@ header {
   padding-top: 10px;
   padding-bottom: 1px;
 }
-.dropdownactive{
-  display: block;
-}
 .dropdown li{
   margin-bottom: 15px;
   margin-right: 45px;
 }
 .dropdown li a{
-    display: block;
-    color: white;
-    font-size: 1.3rem;
-    text-decoration: none;
-    font-weight: 300;
-    padding: 5px 100vw 5px 20px !important;
+  display: block;
+  color: white;
+  font-size: 1.3rem;
+  text-decoration: none;
+  font-weight: 300;
+  padding: 5px 100vw 5px 20px !important;
 }
 .dropdown li a:hover{
   color: var(--blue);
   background-color: white;
+}
+
+.arrowactive{
+  transform: rotateZ(90deg);
+  transition: 0.2s;
+}
+.dropdownactive{
+  display: block;
 }
 .topline{
   transform-origin: right;
@@ -206,53 +207,30 @@ header {
 }
 
 @keyframes menutopanim {
-  from{
-    transform: translateY(0%) rotateZ(0deg);
-  }
-  to{
-    transform: translateY(-3px) rotateZ(-45deg);
-  }
+  from{transform: translateY(0%) rotateZ(0deg);}
+  to{transform: translateY(-3px) rotateZ(-45deg);}
 }
 
 @keyframes menumidanim {
-  from{
-    transform: scaleX(1);
-  }
-  to{
-    transform: scaleX(0);
-  }
+  from{transform: scaleX(1);}
+  to{transform: scaleX(0);}
 }
 @keyframes menubotanim {
-  from{
-    transform: translateY(0%) rotateZ(0deg);
-  }
-  to{
-    transform: translateY(8px) rotateZ(45deg);
-  }
+  from{transform: translateY(0%) rotateZ(0deg);}
+  to{transform: translateY(8px) rotateZ(45deg);}
 }
 @keyframes topoutanim {
-  from{
-    transform: translateY(-3px) rotateZ(-45deg);
-  }
-  to{
-    transform: translateY(0%) rotateZ(0deg);
-  }
+  from{transform: translateY(-3px) rotateZ(-45deg);}
+  to{transform: translateY(0%) rotateZ(0deg);}
 }
 @keyframes midoutanim {
   from{
-    transform: scaleX(0);
-  }
-  to{
-    transform: scaleX(1);
-  }
+    transform: scaleX(0);}
+  to{transform: scaleX(1);}
 }
 @keyframes botoutanim {
-  from{
-    transform: translateY(8px) rotateZ(45deg);
-  }
-  to{
-    transform: translateY(0%) rotateZ(0deg);
-  }
+  from{transform: translateY(8px) rotateZ(45deg);}
+  to{transform: translateY(0%) rotateZ(0deg);}
 }
 
 

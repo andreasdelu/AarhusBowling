@@ -133,10 +133,7 @@ header {
     width: 34px;
     margin: 0;
     margin-right: 20px;
-    padding: 0px 0px 30px 20px;
-}
-.burger:hover .menu{
-    display: flex;
+    cursor: pointer;
 }
 .menu li {
   position: relative;
@@ -188,12 +185,6 @@ header {
   color: var(--blue);
   background-color: white;
 }
-.dropmenu:hover .dropdown{
-  display: block;
-}
-.dropmenu:hover .arrow{
-  transform: rotateZ(90deg);
-}
 
 .widemenu{
   display: none;
@@ -243,6 +234,75 @@ header {
   opacity: 0.9;
 }
 
+/********** Classes for Javascript **********/
+
+.arrowactive{
+  transform: rotateZ(90deg);
+  transition: 0.2s;
+}
+.dropdownactive{
+  display: block;
+}
+.topline{
+  transform-origin: right;
+  transition: 0.2s;
+}
+.midline{
+  transition: 0.2s;
+}
+.botline{
+  transform-origin: right;
+  transition: 0.2s;
+}
+
+.topon{
+  animation: menutopanim 0.2s linear 0.1s forwards;
+}
+.midon{
+  animation: menumidanim 0.1s linear forwards;
+}
+.boton{
+  animation: menubotanim 0.2s linear 0.1s forwards;
+}
+
+.topoff{
+  animation: topoutanim 0.2s linear forwards;
+}
+.midoff{
+  transform: scaleX(0);
+  animation: midoutanim 0.1s linear 0.1s forwards;
+}
+.botoff{
+  animation: botoutanim 0.2s linear forwards;
+}
+
+@keyframes menutopanim {
+  from{transform: translateY(0%) rotateZ(0deg);}
+  to{transform: translateY(-3px) rotateZ(-45deg);}
+}
+
+@keyframes menumidanim {
+  from{transform: scaleX(1);}
+  to{transform: scaleX(0);}
+}
+@keyframes menubotanim {
+  from{transform: translateY(0%) rotateZ(0deg);}
+  to{transform: translateY(8px) rotateZ(45deg);}
+}
+@keyframes topoutanim {
+  from{transform: translateY(-3px) rotateZ(-45deg);}
+  to{transform: translateY(0%) rotateZ(0deg);}
+}
+@keyframes midoutanim {
+  from{
+    transform: scaleX(0);}
+  to{transform: scaleX(1);}
+}
+@keyframes botoutanim {
+  from{transform: translateY(8px) rotateZ(45deg);}
+  to{transform: translateY(0%) rotateZ(0deg);}
+}
+
 /********** Content **********/
 
 #forside{
@@ -250,7 +310,6 @@ header {
   align-items: center;
   flex-direction: column;
 }
-
 
 .hero1 {
   background-image: linear-gradient(rgba(0, 0, 200, 0.02), rgba(87, 87, 172, 0.6)), url("../images/bowle1.jpeg");
@@ -606,16 +665,18 @@ footer p {
 
 
 /********** Fest & Events **********/
-.festevents.html h1
+#festover
 {
-  display: flex;
-  text-align: center;
+  text-align: center; 
   color: var(--blue); 
+  padding-top: 15px; 
+  font-weight: 700;
+  font-size: 40px; 
 }
 
 .blå, .børne, .klub {
   height: 100%; 
-  font-size: 4vw; 
+  font-size: 20px; 
   margin: 5vw; 
   display: flex;
   color: white; 
@@ -639,9 +700,8 @@ footer p {
   z-index: -1; 
 }
 
-.blå h2, .klub h2, .børne h2 {
+.blå h3, .klub h3, .børne h3 {
   color: white;  
-  text-align: center;
   margin: 0 auto; 
   max-width: 5ch; 
   font-size: 4rem; 
@@ -678,9 +738,9 @@ footer p {
 
 .overnyhed 
 {
-  display: flex;
-  justify-content: center;
-  padding-top: 3vw; 
+  text-align: center; 
+  font-weight: 700;
+  font-size: 40px; 
   padding-left: auto; 
   padding-right: auto;
   color: var(--blue); 
@@ -689,7 +749,7 @@ footer p {
 .undernyhed
 {
   color: var(--blue);
-  margin-left: 3vw; 
+  margin: 3vw; 
   font-weight: 500; 
 }
 
@@ -702,7 +762,7 @@ footer p {
 
 .underpunkterny li 
 {
-  margin: 0 0 10px 0; 
+  margin: 0 0 2vw 1vw; 
 }
 
 #inputtekst
@@ -743,9 +803,9 @@ footer p {
 
 #tilmeldknap::after {
   content: '';
-  width: 7.5%;
-  height: 7.5%;
-  right: 15px;
+  width: 5%;
+  height: 5%;
+  right: 20px;
   opacity: 0.7; 
   background-image: url("../images/nyhedsikonhvid.png");
   position: absolute; 
