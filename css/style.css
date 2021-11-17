@@ -213,9 +213,13 @@ header {
   font-size: 1.1rem;
   font-weight: 300;
   padding: 5px 10px;
-  border-radius: 20px;
+  /* border-radius: 20px 20px 0px 0px; */
 }
-.menupunkter a:hover{
+/* .menupunkter a:hover{
+  background-color: var(--blue);
+  color: white;
+} */
+.menupunkter:hover > a{
   background-color: var(--blue);
   color: white;
 }
@@ -567,6 +571,7 @@ footer p {
   background-repeat:repeat;
   background-size: 100%;
   width: 100vw;
+  min-height: 80vh;
   margin: 0;
   padding: 0;
   display: flex;
@@ -959,6 +964,82 @@ footer p {
   .widemenu{
     display: flex;
   }
+  .menupunkter{
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .menupunkter a{
+    border-radius: 10px 10px 0px 0;
+    z-index: 10;
+  }
+  .menupunkter::after{
+    content: '';
+    display: none;
+    position: absolute;
+    bottom: -100%;
+    background-color: var(--blue);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  .widedropmenu{
+    display: none;
+    position: absolute;
+    top: 180%;
+    background-color: var(--blue);
+    border-radius: 0 0px 10px 10px;
+    z-index: 2;
+  }
+  .widedropdown{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 0;
+    overflow-x: hidden;
+  }
+  .widedropdown li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .widedropdown li a{
+    position: relative;
+    color: white;
+    border-radius: 0;
+    white-space: nowrap;
+    font-size: 1.1rem;
+    font-weight: 200;
+    padding: 5px 10px;
+    z-index: 120;
+    margin: 0;
+  }
+  .widedropdown li a::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 500%;
+    height: 100%;
+    z-index: -1;
+    
+  }
+  .widedropdown li a:hover{
+    color: var(--blue);
+    background-color: white;
+  }
+  .menupunkter:hover > .widedropmenu{
+    display: block;
+  }
+  .menupunkter:hover::after{
+    display: block;
+  }
+  .widedropdown li a:hover::before{
+    background-color: white;
+  }
 
   /********** PowerBowling-underside **********/
 
@@ -1075,19 +1156,19 @@ footer p {
   .neoncontainer{
     display: flex;
     align-items: center;
-    margin: 0 auto;
+    margin: 80px auto 20px auto;
     width: 90%;
-    justify-content: space-between;
   }
   .v2{
     display: none;
   }
   .v1{
     display: block;
+    margin: 0 8vw;
   }
   .powerbowl a {
     margin-top: 0px;
-    margin-bottom: 70px;
+    margin-bottom: 120px;
     display: block;
     font-size: 2rem;
     font-weight: 300;
