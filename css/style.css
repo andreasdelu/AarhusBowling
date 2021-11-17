@@ -1,5 +1,3 @@
-@import url("https://use.typekit.net/mao7wyd.css");
-
 :root {
   --blue: #0f1972;
   --grey: #f0f0f0;
@@ -151,6 +149,7 @@ header {
     margin: 0 28px 0 0;
     color: var(--blue);
     transition: 0.1s;
+    cursor: pointer;
 }
 .dropmenu::before{
   content: '';
@@ -324,13 +323,14 @@ header {
 }
 
 .hero1 {
-  background-image: linear-gradient(rgba(0, 0, 200, 0.02), rgba(87, 87, 172, 0.6)), url("../images/bowle1.jpeg");
-  /* background-image: linear-gradient(rgba(0, 0, 200, 0.3) 25%, rgb(240, 240, 240)), url("../images/bowle1.jpeg"); */
+  background-image: linear-gradient(rgba(0, 0, 200, 0.02), rgba(87, 87, 172, 0.6)), url("../images/bowle1.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
   width: 100vw;
-  height: 280px;
+  height: 30vw;
+  min-height: 250px;
+  max-height: 350px;
   margin: 0;
   padding: 0;
   display: flex;
@@ -378,7 +378,7 @@ h1 {
   margin-bottom: auto;
   position: fixed;
   height: auto;
-  top: 90px;
+  top: 20px;
   right: 20px;
 }
 .bookfollow a {
@@ -398,7 +398,7 @@ h1 {
     background: #f0f0f0;
     background-image: 
     linear-gradient(rgba(240, 240, 240, 0.9), 
-    rgba(240, 240, 240, 0.9)), url("../images/bil.png");
+    rgba(240, 240, 240, 0.9)), url("../images/bil.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center right;
@@ -422,11 +422,15 @@ h1 {
 }
 
 /********** Previews **********/
-
+.previewcontainer{
+  height: 100%;
+}
 .power, .buffet {
-  background-image: linear-gradient(rgba(126, 126, 126, 0.1), rgba(25, 25, 54, 0.8)), url("../images/powerpreview.png");
+  background-image: linear-gradient(rgba(126, 126, 126, 0.1), rgba(25, 25, 54, 0.8)), url("../images/powerpreview.webp");
   width: 100vw;
   height: 100vw;
+  max-height: 350px;
+  max-width: 350px;
   margin: 0;
   margin-bottom: 15vw;
   padding: 0;
@@ -434,32 +438,29 @@ h1 {
   background-size: cover; 
   background-position: 50% 50%; 
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   border-radius: 20px;
+  box-shadow: 0 0 30px -15px black;
 }
 .buffet {
-  background-image: linear-gradient(rgba(126, 126, 126, 0.1), rgba(25, 25, 54, 0.8)), url("../images/buffetbillede.jpg");
+  background-image: linear-gradient(rgba(126, 126, 126, 0.1), rgba(25, 25, 54, 0.8)), url("../images/bowle2.webp");
   margin-bottom: 20px;
 }
 
 .power h2, .buffet h2 {
+  display: block;
   color: white;
   padding-top: 0;
   text-align: center;
   margin: 0;
+  margin-top: auto;
   max-width: 10ch;
   font-size: 3.5rem;
   padding: 0;
 }
 
-.buffet h2 { 
-  padding: 0;
-  font-size: 4rem;
-}
-
 .readmore{
+  display: inline-block;
   width: fit-content;
   text-decoration: none;
   color: white;
@@ -468,7 +469,7 @@ h1 {
   text-align: center;
   background-color: var(--blue);
   border-radius: 200px;
-  margin: 30px 0 0 0;
+  margin: auto 0 30px 0;
   padding: 5px 15px;
   box-shadow: 0 0 40px 0px rgba(255, 255, 255, 0.3);
 }
@@ -484,8 +485,8 @@ h1 {
     background: #f0f0f0;
     background-image: 
     linear-gradient(rgba(240, 240, 240, 0.9), 
-    rgba(240, 240, 240, 0.9)), url("../images/nyhedsikon.png");
-    background-size: 100px;
+    rgba(240, 240, 240, 0.9)), url("../images/nyhedsikon.webp");
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center right;
     margin: 0 20px 20px 20px;
@@ -508,7 +509,7 @@ h1 {
     background-color: var(--blue);
     border-radius: 200px;
     margin: auto 0; 
-    margin-top: 25px;   
+    margin-top: 10px;   
     padding: 5px 10px 5px 10px;
     text-align: center; 
 }
@@ -536,7 +537,7 @@ footer {
 
 .kontakt {
   padding-top: 18px;
-  margin-bottom: 0px;
+  margin-bottom: 20px;
 }
 
 footer h3 {
@@ -627,17 +628,16 @@ footer p {
 }
 #powerinfo article{
   margin: 0 0 20px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 #powerinfo h1, #powerinfo h2{
   margin: 10px 20px 5px 20px;
   font-size: 1.25rem;
   color: var(--blue);
   max-width: none;
-  text-align: left;
-}
-
-#powerinfo h2{
-  margin: 20px 20px 5px 20px;;
+  text-align: center;
 }
 .infotab{
   background-color: var(--grey);
@@ -647,6 +647,7 @@ footer p {
 }
 .infotab p{
   margin: 5px 20px;
+  text-align: center;
 }
 .infotab summary{
   padding: 10px 20px;
@@ -656,7 +657,6 @@ footer p {
   text-align: center;
   cursor: pointer;
 }
-
 .footerimg{
   width: 100px;
   opacity: 0.1;
@@ -688,79 +688,114 @@ footer p {
 
 
 /********** Fest & Events **********/
-#festevents 
-{
-  display: flex; 
+#events{
+  min-height: 90vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
   flex-direction: column;
-  height: 100%; 
-  width: 100%; 
 }
 
+#festevents 
+{
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%; 
+}
+.festhero{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 200, 0.02), rgba(87, 87, 172, 0.6)), url("../images/bowle2.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 80% 70%;
+  height: 30vw;
+  min-height: 200px;
+  max-height: 300px;
+  margin: 0 0 40px 0;
+  padding: 0;
+  border-radius: 0 0 30px 30px;
+}
 #festover
 {
   text-align: center; 
-  color: var(--blue); 
-  padding-top: 15px; 
+  color: white; 
+  padding: 0;
+  margin: 0;
   font-weight: 700;
   font-size: 40px; 
 }
-
 #festevents ul{
   margin-bottom: 5px;
 }
-
 #festevents li{
   margin-bottom: 12px;
 }
-
-
 .blå, .børne, .klub { 
   font-size: 20px; 
-  margin-left: 20px; 
+  margin: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 0; 
   margin-bottom: 40px;
   color: white; 
-  background-color: var(--blue);
-  width: 500px; 
-  height: 500px;
+  background-image: linear-gradient(#333e9c, #0f1972);
+  width: 320px;
+  max-width: 320px;
+  height: 300px;
+  height: fit-content;
   border-radius: 20px; 
   position: relative; 
   z-index: 20;
   display: flex;
   flex-direction: column;
-}
-
-.klub{
-  margin-right: 20px;
+  box-shadow: 0 0 30px -20px black;
+  
 }
 
 .infofest{
-  background-color: var(--grey);
+  margin-top: auto;
+  background-color: none;
+  margin-bottom: auto;
 }
 .infofest[open] > summary{
-  border-bottom: 1px solid var(--blue);
+  border-bottom: 1px solid white;
 }
 .infofest ul{
-  margin: 5px 20px;
+  margin: 15px 20px;
+  height: 11.5rem;
+  overflow-y: auto;
+}
+
+.infofest ul::-webkit-scrollbar-thumb{
+  background: white;
 }
 .infofest summary{
   padding: 10px 20px;
-  color: var(--blue);
+  color: white;
   font-size: 1.4rem;
-  background-color: var(--grey);
+  background-color: none;
   text-align: center;
-  cursor: pointer;
+  pointer-events: none;
+  border-bottom: 1px solid white;
 }
 
 .blå::before, .børne::before, .klub::before {
   content: ''; 
   background-image: url("../images/kuglekegle.svg");
   background-repeat: no-repeat; 
-  background-size: 300px; 
-  background-position: 50% 100%; 
+  background-size: 80%; 
+  background-position: 50% 50%; 
   position: absolute;
   width: 100%; 
   height: 100%;
-  opacity: 0.1; 
+  opacity: 0.03; 
   z-index: -1; 
 }
 
@@ -769,6 +804,7 @@ footer p {
   color: white; 
   text-align: center;
   margin-bottom: 5px;
+  margin-top: 10px;
 }
 
 .blå a, .klub a, .børne a  {
@@ -777,9 +813,10 @@ footer p {
   font-weight: 500;
   font-size: 1.0rem;
   background-color: var(--blue);
-  margin: 0 auto;
+  margin: 10px auto;
   border-radius: 200px; 
   padding: 5px 10px 5px 10px; 
+  outline: 1px solid white;
 }
 .blå a:hover, .klub a:hover, .børne a:hover 
 {
@@ -788,93 +825,79 @@ footer p {
 }
 
 /********** Nyhedsbrev **********/
-
-.baggrundnyhed
-{
-  opacity: 0.10;
-  position: fixed; 
-  top: 100px;
-  bottom: 0; 
-  width: 100vw; 
-  height: 100vw; 
-  z-index: -5000; 
+.nyhedsbrev{
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.overnyhed 
-{
-  text-align: center; 
-  font-weight: 700;
-  font-size: 40px; 
-  padding-left: auto; 
-  padding-right: auto;
-  color: var(--blue); 
-}
-
-.undernyhed
-{
-  color: var(--blue);
-  margin: 3vw; 
-  font-weight: 500; 
-}
-
-.underpunkterny 
-{
-  color: var(--blue);
-  font-size: 1.3rem;  
-  font-weight: 400; 
-}
-
-.underpunkterny li 
-{
-  margin: 0 0 2vw 1vw; 
-}
-
-#inputtekst
-{
-  display: flex; 
+#nyhed{
+  width: 90vw;
+  max-width: 750px;
+  background-color: var(--blue);
+  height: 32vw;
+  min-height: 300px;
+  max-height: 400px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 10px; 
+  border-radius: 20px;
 }
 
-#fornavn, #efternavn, #email
-{
-  margin-bottom: 3vw;
-  margin-left: 3vw; 
-  margin-right: 3vw;
-  border-radius: 4px;
-  border: 2px solid var(--blue);  
-  font: var(--halcom);
-  font-weight: 500; 
-  text-align: center;  
+#nyhed img{
+  margin-top: 20px;
+  height: 40px;
+  width: auto;
 }
-
+.overnyhed{
+  margin: 10px 0;
+  padding: 0;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.undernyhed{
+  margin: 0 40px;
+  padding: 0;
+  color: white;
+  font-size: 1rem;
+  font-weight: 200;
+  text-align: center;
+}
+#email{
+  font-family: var(--halcom);
+  text-align: center; 
+  height: 30px;
+  width: 40%;
+  min-width: 200px;
+  max-width: 400px;
+  border-radius: 20px;
+  border: none;
+  margin-top: 20px;
+}
+#email::placeholder{
+  color: var(--blue);
+  text-align: center; 
+  font-weight: 200;
+}
 #tilmeldknap
 {
   text-decoration: none;
   color: white;
-  font-weight: 500;
-  font-size: 1.2rem;
+  font-weight: 300;
+  font-size: 1.1rem;
   background-color: var(--blue);
-  border-radius: 4px; 
-  margin-bottom: 3vw;
-  margin-left: 3vw; 
-  margin-right: 3vw;
+  border-radius: 20px; 
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding: 5px 5px 5px 5px;
   display: flex; 
   justify-content: center;
-}
-
-#tilmeldknap::after {
-  content: '';
-  width: 25px;
-  height: 50px;
-  right: 25px;
-  opacity: 0.7; 
-  background-image: url("../images/nyhedsikonhvid.png");
-  position: absolute; 
-  background-size: contain;
-  background-repeat: no-repeat;  
+  outline: 1px solid white;
 }
 
 #tilmeldknap:hover {
@@ -882,14 +905,41 @@ footer p {
   color: var(--blue); 
 }
 
-#tilmeldknap:hover::after {
-  background-image: url("../images/nyhedsikon.png");  
+@media screen and (max-width: 755px) {
+  #powerinfo article{
+    margin: 0 0 20px 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  #powerinfo h1, #powerinfo h2, #powerinfo p{
+    text-align: left;
+  }
 }
 
 @media screen and (min-width: 600px){
 
   .footerimg{
     display: block;
+  }
+  #forside h1 {
+    color: rgb(255, 255, 255);
+    margin-top: 0;
+    text-align: center;
+    margin: auto 0;
+    max-width: none;
+    font-size: 2.8rem;
+  }
+  .container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100vw;
+    max-width: 1000px;
+  }
+  .power, .buffet{
+    margin: 0 20px 40px 20px;
   }
 
 }
@@ -945,9 +995,6 @@ footer p {
     font-size: 1rem;
     margin-bottom: 1rem;
   }
-
-  
-
 
 }
 
@@ -1118,6 +1165,10 @@ footer p {
     position: relative;
   }
   
+  #forside h1{
+    font-size: 3rem;
+  }
+  
 }
 
 @media screen and (min-width: 1000px) {
@@ -1133,13 +1184,24 @@ footer p {
     justify-content: space-evenly;
   } 
 
-  /********** FEST OG EVENTS **********/
+  /********** NYHEDSBREV **********/
   
-  #festevents {
-    display: flex; 
-    flex-direction: row;
+  .overnyhed {
+    font-size: 2.3rem;
   }
-}
+  .undernyhed {
+    font-size: 1.4rem; 
+  }
+  #nyhed img{
+    margin-top: 20px;
+    height: 60px;
+    width: auto;
+  }
+  #forside h1{
+    font-size: 4rem;
+  }
+
+} 
 
 @media screen and (min-width: 1350px)
 {
