@@ -1,9 +1,16 @@
 :root {
+
+  /* Farver */
+
   --blue: #0f1972;
   --grey: #f0f0f0;
 
+  /* Font */
+
   --halcom: "halcom", sans-serif;
 }
+
+/********** Html og body **********/
 
 html,
 body {
@@ -212,12 +219,7 @@ header {
   font-size: 1.1rem;
   font-weight: 300;
   padding: 5px 10px;
-  /* border-radius: 20px 20px 0px 0px; */
 }
-/* .menupunkter a:hover{
-  background-color: var(--blue);
-  color: white;
-} */
 .menupunkter:hover > a{
   background-color: var(--blue);
   color: white;
@@ -242,7 +244,9 @@ header {
   white-space: nowrap;
 }
 .book a:hover{
-  opacity: 0.9;
+  outline: 1px solid var(--blue);
+  background-color: white;
+  color: var(--blue);
 }
 
 /********** Classes for Javascript **********/
@@ -569,8 +573,6 @@ footer p {
 
 .powerbowl {
   background-image: url("../images/seamwall.webp");
-  background-repeat:repeat;
-  background-size: 100%;
   width: 100vw;
   min-height: 80vh;
   margin: 0;

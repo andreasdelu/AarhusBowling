@@ -7,17 +7,18 @@
     <meta name="author" content="Drengene" />
     <meta name="description" content="Århus Bowlinghal bringer dig bowling midt i Aarhus!" />
     <meta name="keywords" content="Aarhus, bowling, århus, centrum, power, powerbowling, buffet, spisning" />
-    <title>Århus Bowlinghal</title>
+    <title>Århus Bowlinghal / Forside</title>
     <link rel="stylesheet" href="https://use.typekit.net/mao7wyd.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
     <link rel="apple-touch-icon" href="images/favicon.svg">
 </head>
 <body>
-
+  <!-- Sidens header element -->
   <header>
+    <!-- Århus Bowlinghals logo -->
     <a class="logo" href="index.html"><img src="images/logo.svg" alt="Århus Bowlinghal Logo SVG"></a>
-
+    <!-- Burgermenuens ikon i SVG format -->
     <div class="burger">
       <svg id="burger" class="menuicon" version="1.1" id="L2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
@@ -26,7 +27,9 @@
         <line id="midline" class="midline menuline" x1="30" x2="2" y1="16" y2="16"/>
         <line id="botline" class="botline menuline" x1="30" x2="2" y1="24" y2="24"/>
       </svg>
-        <nav id="menu" class="menu">
+      <!-- Burgermenu der bliver vist på mobile enheder eller små skærme -->
+        <nav id="menu" class="menu"> 
+          <!-- Liste der indeholder alle menupunkterne i burgermenuen og deres tilhørende dropdowns -->
             <ul>
                 <li>
                   <a href="festevents.html">Fest & Events</a>
@@ -75,10 +78,13 @@
                   </div>
                 </li>
             </ul>
+            <!-- Booking i burgermenu -->
             <a class="bookdropdown" href="http://web.flexybox.com/internetbooking/banebooking.asp?cID=154">Book nu</a>
         </nav>
-    </div>
+    </div> 
+    <!-- Menu der bliver vist på desktop -->
     <nav class="widemenu">
+      <!-- Liste med menupunkter og deres tilhørende dropdowns -->
       <ul class="navbar">
         <li class="menupunkter">
           <a href="festevents.html">Fest & Events</a>
@@ -123,50 +129,55 @@
           </div>
         </li>
       </ul>
+      <!-- Booking knap -->
       <div class="book">
         <a class="booking" href="http://web.flexybox.com/internetbooking/banebooking.asp?cID=154">Book nu</a>
       </div>
     </nav>
   </header>
-
+    <!-- Main element der fungerer som wrapper for forsidens indhold -->
     <main id="forside">
+      <!-- Forsidens hero billede med overliggende tekst samt booking knap -->
       <section class="hero1">
         <h1> Bowling i hjertet af Aarhus </h1>
         <a href="http://web.flexybox.com/internetbooking/banebooking.asp?cID=154">Book nu</a>
       </section>
+      <!-- Booking knap der følger med når brugeren scroller -->
       <div class="bookfollow">
         <a href="http://web.flexybox.com/internetbooking/banebooking.asp?cID=154">Book nu</a>
       </div>
-
+      <!-- Section der indeholder info om parkering samt et billede af en bil -->
       <section class="parkering">
           <h2>GRATIS PARKERING</h2>
           <h3>Ved registrering af bil i reception</h3>
       </section>
 
+      <!-- En flex container til de to previews, der styrer de to elementers positioner på siden (Baggrundsbillede i CSS) -->
       <div class="container">
+        <!-- Preview billede til power bowling undersiden, med tilhørende tekst og læs mere knap som overlay (Baggrundsbillede i CSS) -->
         <section class="power">
           <div class="previewcontainer">
             <h2> Power Bowling </h2>
             <a class="readmore" href="powerbowling.html"> Læs mere </a>
           </div>
         </section>
-  
+        <!-- Preview billede til fest og event undersiden, med tilhørende tekst og læs mere knap som overlay (Baggrundsbillede i CSS) -->
         <section class="buffet">
           <div class="previewcontainer">
             <h2>Fest & Events</h2>
-            <a class="readmore" href="https://www.aarhusbowlinghal.dk/amerikansk-buffet-the-taste-of-america/"> Læs mere </a>
+            <a class="readmore" href="festevents.html"> Læs mere </a>
           </div>
         </section>
       </div>
-      
+      <!-- Section der indeholder en knap til tilmelding af nyhedsbrev samt et billede af et åbent brev (Baggrundsbillede i CSS) -->
       <section class="nyhed">
         <h2>TILMELD DIG VORES NYHEDSBREV </h2>
         <a href="nyhedsbrev.html"> Tilmeld </a>
-          
       </section>
     </main> 
-
+    <!-- Sidens footer element der også fungerer som flexbox til at styre de underliggende elementers position -->
     <footer>
+      <!-- Div element der indeholder alle forretningens kontaktoplysninger -->
       <div class="kontakt">
           <h3>Kontakt</h3>
           <hr>
@@ -174,7 +185,9 @@
           <p>aarhusbowlinghal@mail.dk</p>
           <a href="https://www.facebook.com/Aarhusbowlinghal">Facebook</a> 
       </div>
+      <!-- Billede af en bowlingkugle og kegle -->
       <img class="footerimg" src="images/kuglekegle.svg" alt="Århus bowlinghal kugle og kegle">
+      <!-- Div element der indeholder forretningens adresse -->
       <div class="adresse">
           <h3>Adresse</h3>
           <hr>
@@ -183,6 +196,7 @@
           <p>8000 Aarhus C</p>
       </div>
     </footer>
+    <!-- Scriptet der styrer burgermenuens funktion -->
     <script src="/js/script.js"></script>
 
   </body>
