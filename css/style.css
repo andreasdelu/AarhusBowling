@@ -40,7 +40,7 @@ body {
 }
 
 
-/********** Navigation **********/
+/********** Navigation + Header **********/
 
 header {
   background-color: white;
@@ -64,6 +64,8 @@ header {
   height: 100%;
   width: auto;
 }
+
+/********** Menulinje på mobil (brugermenu) **********/
 
 .burger {
   margin-bottom: 0;
@@ -192,6 +194,8 @@ header {
   background-color: white;
 }
 
+/********** Menulinje på desktop **********/
+
 .widemenu{
   display: none;
   align-items: center;
@@ -318,7 +322,7 @@ header {
   to{transform: translateY(0%) rotateZ(0deg);}
 }
 
-/********** Content **********/
+/********** Forside **********/
 
 #forside{
   display: flex;
@@ -396,7 +400,7 @@ h1 {
   padding: 5px 15px 5px 15px;
 }
 
-/********** Parkering **********/
+/********** Parkering på forside **********/
 
 .parkering {
     background: #f0f0f0;
@@ -425,7 +429,8 @@ h1 {
   font-weight: 400;
 }
 
-/********** Previews **********/
+/********** Previews på forside **********/
+
 .previewcontainer{
   height: 100%;
 }
@@ -483,7 +488,7 @@ h1 {
     color: var(--blue);
 }
 
-/********** Nyhedsbrev **********/
+/********** Nyhedsbrev på forside **********/
 
 .nyhed {
     background: #f0f0f0;
@@ -665,7 +670,7 @@ footer p {
   display: none;
 }
 
-/********** Video **********/
+/********** Video powerbowling **********/
 
 .videocontainer{
   width: 100vw;
@@ -690,6 +695,7 @@ footer p {
 
 
 /********** Fest & Events **********/
+
 #events{
   min-height: 90vh;
   margin: 0;
@@ -826,7 +832,8 @@ footer p {
   color: var(--blue); 
 }
 
-/********** Nyhedsbrev **********/
+/********** Nyhedsbrev underside **********/
+
 .nyhedsbrev{
   min-height: 70vh;
   display: flex;
@@ -907,49 +914,12 @@ footer p {
   color: var(--blue); 
 }
 
-@media screen and (max-width: 755px) {
-  #powerinfo article{
-    margin: 0 0 20px 0;
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-  }
-  
-  #powerinfo h1, #powerinfo h2, #powerinfo p{
-    text-align: left;
-  }
-}
-
-@media screen and (min-width: 600px){
-
-  .footerimg{
-    display: block;
-  }
-  #forside h1 {
-    color: rgb(255, 255, 255);
-    margin-top: 0;
-    text-align: center;
-    margin: auto 0;
-    max-width: none;
-    font-size: 2.8rem;
-  }
-  .container{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 100vw;
-    max-width: 1000px;
-  }
-  .power, .buffet{
-    margin: 0 20px 40px 20px;
-  }
-
-}
+/********** Media Queries **********/
 
 @media screen and (min-width: 500px){
   
   /********** Footer **********/
-
+  
   footer {
     width: 100vw;
     margin: 0;
@@ -1000,7 +970,50 @@ footer p {
 
 }
 
+@media screen and (min-width: 600px){
+  /********** Footer billede gøres synligt **********/
+  .footerimg{
+    display: block;
+  }
+  /********** Forside **********/
+  #forside h1 {
+    color: rgb(255, 255, 255);
+    margin-top: 0;
+    text-align: center;
+    margin: auto 0;
+    max-width: none;
+    font-size: 2.8rem;
+  }
+  .container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100vw;
+    max-width: 1000px;
+  }
+  .power, .buffet{
+    margin: 0 20px 40px 20px;
+  }
+  
+}
+@media screen and (max-width: 755px) {
+
+  /********** Powerbowling **********/
+  #powerinfo article{
+    margin: 0 0 20px 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  #powerinfo h1, #powerinfo h2, #powerinfo p{
+    text-align: left;
+  }
+}
+
+
 @media screen and (min-width: 840px) {
+  /********** Burgermenu fjernes og erstattes af desktop menulinjen **********/
   .burger{
     display: none;
   }
@@ -1147,7 +1160,7 @@ footer p {
   .p2{
     display: none;
   }
-  /********** Video **********/
+  /********** Video powerbowling **********/
 
   .videocontainer{
     width: 100vw;
@@ -1166,6 +1179,8 @@ footer p {
     box-sizing: border-box;
     position: relative;
   }
+
+  /********** forside h1 ændrer størrelse **********/
   
   #forside h1{
     font-size: 3rem;
@@ -1186,7 +1201,7 @@ footer p {
     justify-content: space-evenly;
   } 
 
-  /********** NYHEDSBREV **********/
+  /********** NYHEDSBREV underside **********/
   
   .overnyhed {
     font-size: 2.3rem;
@@ -1205,8 +1220,8 @@ footer p {
 
 } 
 
-@media screen and (min-width: 1350px)
-{
+@media screen and (min-width: 1350px){
+  /********** Power bowling **********/
   .videocontainer{
     width: 100vw;
     max-width: 600px;
