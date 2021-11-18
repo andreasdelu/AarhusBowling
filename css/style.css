@@ -247,7 +247,7 @@ header {
   font-weight: 400;
   white-space: nowrap;
 }
-.book a:hover{
+.book a:hover, .bookfollow a:hover{
   outline: 1px solid var(--blue);
   background-color: white;
   color: var(--blue);
@@ -294,6 +294,8 @@ header {
 .botoff{
   animation: botoutanim 0.2s linear forwards;
 }
+
+/********** Burgermenu animationer **********/
 
 @keyframes menutopanim {
   from{transform: translateY(0%) rotateZ(0deg);}
@@ -392,12 +394,13 @@ h1 {
 .bookfollow a {
   text-decoration: none;
   color: white;
-  font-weight: 500;
-  font-size: 1.5rem;
+  font-weight: 400;
+  font-size: 1.1rem;
   background-color: var(--blue);
-  border-radius: 200px;
   box-shadow: 0 0 40px 0px rgba(255, 255, 255, 0.3);
-  padding: 5px 15px 5px 15px;
+  padding: 8px 10px;
+  border-radius: 30px;
+  font-weight: 400;
 }
 
 /********** Parkering på forside **********/
