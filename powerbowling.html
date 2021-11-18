@@ -165,9 +165,10 @@
           <img class="poster p1" src="images/poster2.webp" alt="Plakat med tider">
           <!-- Video der kun vises når siden er på desktop -->
           <div class="videocontainer v1">
-            <video id="video" autoplay loop muted>
+            <video id="video" autoplay loop muted playsinline>
               <source src="videos/powerbowling.webm" type="video/webm">
-            Your browser does not support the video tag.
+              <source src="videos/powerbowling.mp4" type="video/mp4">
+              Your browser does not support the video tag.
             </video>
           </div>
           <!-- Billede af neon skilt -->
@@ -175,9 +176,10 @@
         </div>
         <!-- Video der kun vises når siden er på mobil -->
         <div class="videocontainer v2">
-          <video id="video" autoplay loop muted>
+          <video id="video" autoplay loop muted playsinline>
             <source src="videos/powerbowling.webm" type="video/webm">
-          Your browser does not support the video tag.
+            <source src="videos/powerbowling.mp4" type="video/mp4">
+            Your browser does not support the video tag.
           </video>
         </div>
         <!-- Booking knap med neon effekt (se CSS) -->
